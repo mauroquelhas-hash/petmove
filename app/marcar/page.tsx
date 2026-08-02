@@ -27,6 +27,15 @@ export default function MarcarPage() {
   const [pickupContactName, setPickupContactName] = useState("");
   const [pickupContactPhone, setPickupContactPhone] = useState("");
   const [pickupNotes, setPickupNotes] = useState("");
+  
+  const [destinationName, setDestinationName] = useState("");
+  const [destinationAddress, setDestinationAddress] = useState("");
+  const [destinationPostalCode, setDestinationPostalCode] = useState("");
+  const [destinationCity, setDestinationCity] = useState("");
+  const [destinationType, setDestinationType] = useState("");
+  const [destinationContactName, setDestinationContactName] = useState("");
+  const [destinationContactPhone, setDestinationContactPhone] = useState("");
+  const [destinationNotes, setDestinationNotes] = useState("");
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const serviceName = params.get("servico");
@@ -55,6 +64,12 @@ export default function MarcarPage() {
   pickupContactName.trim() !== "" &&
   pickupContactPhone.trim() !== "";
 
+  const destinationStepComplete =
+  destinationName.trim() !== "" &&
+  destinationAddress.trim() !== "" &&
+  destinationPostalCode.trim() !== "" &&
+  destinationCity.trim() !== "" &&
+  destinationType !== "";
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-16">
       <section className="mx-auto max-w-5xl">
@@ -146,7 +161,26 @@ export default function MarcarPage() {
           />
         )}
         {currentStep === 4 && (
-  <Step4Destination setCurrentStep={setCurrentStep} />
+ <Step4Destination
+  destinationName={destinationName}
+  setDestinationName={setDestinationName}
+  destinationAddress={destinationAddress}
+  setDestinationAddress={setDestinationAddress}
+  destinationPostalCode={destinationPostalCode}
+  setDestinationPostalCode={setDestinationPostalCode}
+  destinationCity={destinationCity}
+  setDestinationCity={setDestinationCity}
+  destinationType={destinationType}
+  setDestinationType={setDestinationType}
+  destinationContactName={destinationContactName}
+  setDestinationContactName={setDestinationContactName}
+  destinationContactPhone={destinationContactPhone}
+  setDestinationContactPhone={setDestinationContactPhone}
+  destinationNotes={destinationNotes}
+  setDestinationNotes={setDestinationNotes}
+  destinationStepComplete={destinationStepComplete}
+  setCurrentStep={setCurrentStep}
+/>
 )}
 
         </div>

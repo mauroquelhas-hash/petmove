@@ -81,7 +81,7 @@ export default function Step3Pickup({
             type="text"
             value={pickupAddress}
             onChange={(event) => setPickupAddress(event.target.value)}
-            placeholder="Ex.: Rua Cônego Agostinho, 433"
+            placeholder="Ex.: Rua das Flores, 123"
             className="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-950"
           />
         </label>
@@ -95,7 +95,7 @@ export default function Step3Pickup({
             type="text"
             value={pickupPostalCode}
             onChange={(event) => setPickupPostalCode(event.target.value)}
-            placeholder="Ex.: 4415-643"
+            placeholder="Ex.: 4000-123"
             className="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-950"
           />
         </label>
@@ -107,7 +107,7 @@ export default function Step3Pickup({
             type="text"
             value={pickupCity}
             onChange={(event) => setPickupCity(event.target.value)}
-            placeholder="Ex.: Lever"
+            placeholder="Ex.: Porto"
             className="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-950"
           />
         </label>
@@ -156,7 +156,7 @@ export default function Step3Pickup({
               type="text"
               value={pickupContactName}
               onChange={(event) => setPickupContactName(event.target.value)}
-              placeholder="Ex.: Mauro Quelhas"
+              placeholder="Ex.: João Silva"
               className="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-950"
             />
           </label>
