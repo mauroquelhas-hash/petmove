@@ -1,5 +1,5 @@
-import type { Dispatch, SetStateAction } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import type { Dispatch, SetStateAction } from "react";
 
 type Step3PickupProps = {
   pickupAddress: string;

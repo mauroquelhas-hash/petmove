@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Step1Service from "./components/Step1Service";
 import Step2Animal from "./components/Step2Animal";
 import Step3Pickup from "./components/Step3Pickup";
+import Step4Destination from "./components/Step4Destination";
 import services from "./data/services";
 
 export default function MarcarPage() {
@@ -144,6 +145,9 @@ export default function MarcarPage() {
             setCurrentStep={setCurrentStep}
           />
         )}
+        {currentStep === 4 && (
+  <Step4Destination setCurrentStep={setCurrentStep} />
+)}
 
         </div>
       </section>
